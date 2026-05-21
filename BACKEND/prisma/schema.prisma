@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+  
+  
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  resumes   Resume[]
+}
+
+model Resume {
+  id             String   @id @default(uuid())
+  userID         String
+  user           User     @relation(fields: [userID], references: [id], onDelete: Cascade)
+  title          String
+  thumbnailLink  String?
+  aboutYourself  String?
+
+  // Template
+  templateId           String?
+  templateColorPalette String[] // stored as array of strings
+
+  // Profile Info
+  profilePreviewURL String?
+  fullName          String?
+  designation       String?
+  summary           String?
+
+  // Contact Info
+  email     String?
+  phone     String?
+  location  String?
+  linkedin  String?
+  github    String?
+  website   String?
+
+  // JSON fields for nested arrays
+  workExperience Json? // [{company, role, startDate, endDate, description}]
+  education      Json? // [{degree, institution, startDate, endDate}]
+  skills         Json? // [{name, progress}]
+  projects       Json? // [{title, description, github, livedemo}]
+  certification  Json? // [{title, issuer, year}]
+  languages      Json? // [{name, progress}]
+  interests      String[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
