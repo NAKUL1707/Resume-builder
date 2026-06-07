@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { initialTemplateData } from "../data/TemplateModel";
+import { initialTemplateData } from "../Data/TemplateModel";
 import ProfileForm from "../Components/ProfileForm";
 import ContactForm from "../Components/ContactForm";
 import SkillForm from "../Components/SkillForm";
