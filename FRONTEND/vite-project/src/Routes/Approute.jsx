@@ -2,7 +2,7 @@ import Signupcard from "../Components/Signupcard"
 import Logincard from "../Components/Logincard"
 import React from 'react'
 import { Routes, Route } from "react-router-dom"
-import Home from "../pages/home"
+import Landing from "../pages/Home"
 import ResumeBuilder from "../pages/ResumeBuilder"
 import Layout from "../layout/layout"
 function Approute() {
@@ -10,7 +10,7 @@ function Approute() {
     <>
         <Routes > 
             <Route element = {<Layout/>}>
-            <Route path="/" element={<Home/>}/>
+            <Route path="/" element={<Landing/>}/>
             <Route path="/builder" element={<ResumeBuilder />} />
           </Route>
 
