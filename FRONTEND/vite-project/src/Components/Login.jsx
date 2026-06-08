@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+const API_URL = import.meta.env.VITE_API_URL
 
 function Login() {
   const navigate = useNavigate()
@@ -19,7 +20,7 @@ function Login() {
     try {
       // FIX: was calling /api/auth/registerUser (wrong endpoint + wrong path)
       // Correct endpoint is /auth/login
-      const res = await fetch("http://localhost:3000/auth/login", {
+      const res = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password })

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+const API_URL = import.meta.env.VITE_API_URL
 function Signup() {
   const navigate = useNavigate()
   const [name, setName] = useState("")
@@ -24,7 +24,7 @@ function Signup() {
     try {
       // FIX: URL was empty string "" — nothing was being sent
       // FIX: name was missing from request body
-      const res = await fetch("http://localhost:3000/auth/Signup", {
+      const res = await fetch(`${API_URL}/auth/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password })
