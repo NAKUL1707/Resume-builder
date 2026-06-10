@@ -12,7 +12,11 @@ const PORT = process.env.PORT || 3000;
 connectDB()
 
 // Middleware
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin:[ 
+    "http://localhost:5173", 
+    "https://resume-builder-ctln836uq-nakul1707s-projects.vercel.app"
+],
+    credentials: true }));
 app.use(express.json())
 
 // Routes
