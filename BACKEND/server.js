@@ -14,18 +14,18 @@ connectDB()
 // Middleware
 app.use(cors({ origin:[ 
     "http://localhost:5173", 
-    "https://resume-builder-virid-nine-10.vercel.app/"
+    "https://resume-builder-virid-nine-10.vercel.app"
 ],
     credentials: true, 
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']}));
-app.options('*', cors())
+
 app.use(express.json())
 
 // Routes
 app.get('/', (req, res) => {
     res.send('API WORKING')
-})
+}) 
 app.use('/auth', userRouter)
 app.use('/api/resume', resumeRouter)
 
