@@ -14,7 +14,7 @@ connectDB()
 // Middleware
 app.use(cors({ origin:[ 
     "http://localhost:5173", 
-    "https://resume-builder-beta-taupe.vercel.app"
+    "https://resume-builder-virid-nine-10.vercel.app/"
 ],
     credentials: true, 
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
