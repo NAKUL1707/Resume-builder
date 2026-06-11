@@ -16,7 +16,9 @@ app.use(cors({ origin:[
     "http://localhost:5173", 
     "https://resume-builder-ctln836uq-nakul1707s-projects.vercel.app"
 ],
-    credentials: true }));
+    credentials: true, 
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']}));
 app.use(express.json())
 
 // Routes
