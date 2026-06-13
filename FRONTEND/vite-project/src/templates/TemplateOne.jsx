@@ -11,7 +11,7 @@ function TemplateOne({ data }) {
   } = data;
 
   return (
-    <div className="bg-white text-slate-800 p-7 md:p-8 w-full min-h-screen font-sans">
+    <div className="bg-white text-slate-800 p-7 md:p-8 w-full font-sans">
       <div className="border-b border-slate-200 pb-4 mb-6">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
           {profileInfo.fullName || "Your Name"}

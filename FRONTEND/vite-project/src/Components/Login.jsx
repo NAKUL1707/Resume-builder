@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-const API_URL = import.meta.env.VITE_API_URL
+import { API_URL } from '../utils/api'
 
 function Login() {
   const navigate = useNavigate()
@@ -33,7 +33,7 @@ function Login() {
       // Store token for authenticated requests
       localStorage.setItem("token", data.token)
       localStorage.setItem("user", JSON.stringify({ name: data.name, email: data.email }))
-      navigate("/builder");
+      navigate("/templates");
     } catch (err) {
       setError("Network error. Is the server running?")
     } finally {
@@ -79,7 +79,7 @@ function Login() {
         <button
           type="button"
           className="text-slate-200 hover:bg-slate-700/50 rounded-full px-4 py-2 transition"
-          onClick={() => navigate("/Signup")}
+          onClick={() => navigate("/signup")}
         >
           Sign up
         </button>

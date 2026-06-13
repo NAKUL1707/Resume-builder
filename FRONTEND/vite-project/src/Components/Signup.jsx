@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-const API_URL = import.meta.env.VITE_API_URL
+import { API_URL } from '../utils/api'
 function Signup() {
   const navigate = useNavigate()
   const [name, setName] = useState("")
@@ -36,7 +36,7 @@ function Signup() {
       }
       localStorage.setItem("token", data.token)
       localStorage.setItem("user", JSON.stringify({ name: data.name, email: data.email }))
-      navigate("/builder");
+      navigate("/templates");
     } catch (err) {
       setError("Network error. Is the server running?")
     } finally {

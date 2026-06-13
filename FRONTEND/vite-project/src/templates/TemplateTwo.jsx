@@ -29,7 +29,7 @@ function TemplateTwo({ data }) {
   };
 
   return (
-    <div className="bg-white text-slate-800 w-full min-h-screen font-sans flex flex-col md:flex-row">
+    <div className="bg-white text-slate-800 w-full font-sans flex flex-col md:flex-row">
       {/* ── Sidebar ── */}
       <aside className="bg-slate-900 text-slate-200 w-full md:w-64 shrink-0 flex flex-col gap-8 p-8">
         {/* Avatar + Name */}

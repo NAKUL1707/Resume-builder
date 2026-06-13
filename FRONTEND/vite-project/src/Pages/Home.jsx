@@ -56,7 +56,7 @@ function Landing() {
               <div className="mt-8 flex gap-4 justify-center lg:justify-start">
                 <Link
                   to="/signup"
-                  className="px-6 py-3 rounded-lg font-semibold transition bg-sky-500/90 hover:bg-sky-400 text-slate-950 shadow-lg shadow-sky-900/40"
+                  className="px-6 py-3 rounded-xl font-semibold transition bg-gradient-to-r from-sky-500 to-indigo-500 hover:from-sky-400 hover:to-indigo-400 text-white shadow-lg shadow-sky-900/40"
                 >
                   Get Started Free
                 </Link>
@@ -139,7 +139,7 @@ function Landing() {
 
         <Link
           to="/signup"
-          className="inline-block mt-8 bg-red-500 hover:bg-red-600 px-8 py-4 rounded-lg font-semibold"
+          className="inline-block mt-8 bg-gradient-to-r from-sky-500 to-indigo-500 hover:from-sky-400 hover:to-indigo-400 px-8 py-4 rounded-xl font-semibold text-white shadow-lg shadow-sky-900/30 transition"
         >
           Start Building Now
         </Link>
