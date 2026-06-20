@@ -7,6 +7,7 @@ import ContactForm from "../Components/ContactForm";
 import SkillForm from "../Components/SkillForm";
 import ExperienceForm from "../Components/ExperienceForm";
 import EducationForm from "../Components/EducationForm";
+import ProjectForm from "../Components/ProjectForm";
 import ResumePreview from "../Pages/ResumePreview";
 import { API_URL, authHeaders } from "../utils/api";
 import { downloadResumePdf } from "../utils/downloadPdf";
@@ -186,6 +187,7 @@ function ResumeBuilder() {
             <SkillForm data={resumeData} setData={setResumeData} />
             <ExperienceForm data={resumeData} setData={setResumeData} />
             <EducationForm data={resumeData} setData={setResumeData} />
+            <ProjectForm data={resumeData} setData={setResumeData} />
           </div>
 
           {/* Preview */}
