@@ -1,8 +1,0 @@
-{
-  "devDependencies": {
-    "cypress": "^15.14.1"
-  },
-  "dependencies": {
-    "react-ga4": "^3.0.1"
-  }
-}
