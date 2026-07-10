@@ -7,7 +7,6 @@ const resumeRouter = express.Router()
 
 resumeRouter.post('/', protect, createResume)
 resumeRouter.get('/', protect, getUserResume)
-// FIX: was POST — should be GET to fetch a resume by ID
 resumeRouter.get('/:id', protect, getResumebyID)
 resumeRouter.put('/:id', protect, updateResume)
 resumeRouter.put('/:id/upload-image', protect, uploadResumeImage)
